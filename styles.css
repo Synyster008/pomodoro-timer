@@ -1,0 +1,62 @@
+body {
+    background-color: #f7f5dd;
+    font-family: "Courier", monospace;
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    color: #9bdeac;
+    font-size: 50px;
+}
+
+.timer-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.tomato {
+    width: 200px;
+}
+
+h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#start {
+    background-color: #9bdeac;
+}
+
+#reset {
+    background-color: #e7305b;
+    color: white;
+}
+
+#check-marks {
+    font-size: 24px;
+    color: #9bdeac;
+    margin-top: 20px;
+}
