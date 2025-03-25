@@ -12,6 +12,25 @@ const startButton = document.getElementById("start");
 const resetButton = document.getElementById("reset");
 const checkMarks = document.getElementById("check-marks");
 
+function logEvent(eventType) {
+    fetch("/api/LogTelemetry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ event: eventType, timestamp: new Date().toISOString() })
+    }).catch(err => console.error("Error logging telemetry:", err));
+}
+
+startButton.addEventListener("click", () => {
+    logEvent("TimerStarted");
+    startTimer();
+});
+
+resetButton.addEventListener("click", () => {
+    logEvent("TimerReset");
+    resetTimer();
+});
+
+
 function startTimer() {
     reps++;
     let time;
